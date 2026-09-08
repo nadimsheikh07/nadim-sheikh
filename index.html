@@ -34,6 +34,18 @@
     .section-title::after { content: ''; flex: 1; height: 2px; background: linear-gradient(to right, #cdddf0, transparent); }
     .gradient-text { background: linear-gradient(135deg, #1a2f5e, #3b5de7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .link-icon { @apply text-primary-600 hover:text-primary-700 transition-colors; }
+    .btn-download { 
+      background: linear-gradient(135deg, #3b5de7, #2a4bb5);
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(59, 93, 231, 0.3);
+    }
+    .btn-download:hover { 
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(59, 93, 231, 0.4);
+    }
+    .custom-scroll::-webkit-scrollbar { width: 4px; }
+    .custom-scroll::-webkit-scrollbar-track { background: #eef2f7; border-radius: 10px; }
+    .custom-scroll::-webkit-scrollbar-thumb { background: #b6c8e0; border-radius: 10px; }
   </style>
 </head>
 <body class="font-sans antialiased text-slate-800">
@@ -51,11 +63,15 @@
         <span class="bg-primary-100 text-primary-700 px-4 py-0.5 rounded-full text-xs font-semibold border border-primary-200/60">11+ years</span>
       </div>
     </div>
-    <div class="flex flex-wrap gap-2">
+    <div class="flex flex-wrap gap-2 items-center">
       <span class="chip-modern">Go · Gin</span>
       <span class="chip-modern">Node · Python</span>
       <span class="chip-modern">React · Next</span>
       <span class="chip-modern">Angular</span>
+      <!-- DOWNLOAD CV BUTTON - links to PDF -->
+      <a href="Mohammad_Nadim_Sheikh_CV.pdf" download class="btn-download flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-full ml-2">
+        <span class="material-icons text-base">download</span> Download CV
+      </a>
     </div>
   </div>
 
@@ -263,16 +279,20 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
+  <!-- FOOTER with DOWNLOAD CV button -->
   <div class="mt-12 pt-6 border-t border-slate-200/80 flex flex-wrap justify-between items-center text-sm text-slate-500">
     <span>© 2026 · Mohammad Nadim Sheikh</span>
-    <span class="flex gap-4 flex-wrap">
+    <span class="flex gap-4 flex-wrap items-center">
       <a href="https://github.com/nadimsheikh07" target="_blank" class="flex items-center gap-1 hover:text-primary-600 transition"><span class="material-icons text-sm">code</span> nadimsheikh07</a>
       <a href="https://www.linkedin.com/in/nadimsheikh07/" target="_blank" class="flex items-center gap-1 hover:text-primary-600 transition"><span class="material-icons text-sm">work</span> nadimsheikh07</a>
       <a href="https://www.npmjs.com/~nadimsheikh07" target="_blank" class="flex items-center gap-1 hover:text-primary-600 transition"><span class="material-icons text-sm">package</span> ~nadimsheikh07</a>
+      <a href="Mohammad_Nadim_Sheikh_CV.pdf" download class="btn-download flex items-center gap-2 text-white text-xs font-semibold px-5 py-2 rounded-full ml-2">
+        <span class="material-icons text-sm">download</span> Download CV
+      </a>
     </span>
   </div>
 
 </div>
+
 </body>
 </html>
