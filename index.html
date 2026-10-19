@@ -1,298 +1,913 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohammad Nadim Sheikh · Senior Software Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          colors: {
-            primary: { 50: '#eef4ff', 100: '#dce7fe', 500: '#4f7cff', 600: '#3b5de7', 700: '#2a4bb5' },
-            slate: { 850: '#162236' }
-          }
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Mohammad Nadim Sheikh | Senior Software Engineer & Technical Lead
+    </title>
+    <meta
+      name="description"
+      content="Portfolio of Mohammad Nadim Sheikh, Senior Software Engineer and Technical Lead with 11+ years of experience in Go, Node.js, Python, PHP, React, Next.js, Angular, cloud systems, and AI-assisted development."
+    />
+    <meta name="author" content="Mohammad Nadim Sheikh" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] },
+            colors: {
+              primary: {
+                50: "#eef4ff",
+                100: "#dce7fe",
+                500: "#4f7cff",
+                600: "#3b5de7",
+                700: "#2a4bb5",
+              },
+              slate: { 850: "#162236" },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-    }
-  </script>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #f6faff; }
-    .glass-card { background: rgba(255,255,255,0.72); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.5); }
-    .hover-lift { transition: all 0.2s cubic-bezier(0.2, 0, 0, 1); }
-    .hover-lift:hover { transform: translateY(-3px); box-shadow: 0 20px 40px -14px rgba(0,20,60,0.15); }
-    .chip-modern { @apply px-4 py-1.5 text-xs font-medium rounded-full bg-white/80 border border-slate-200/80 text-slate-700 shadow-sm; }
-    .chip-blue { @apply px-4 py-1.5 text-xs font-semibold rounded-full bg-primary-100 text-primary-700 border border-primary-200/60; }
-    .section-title { @apply text-2xl font-bold tracking-tight text-slate-800 flex items-center gap-3; }
-    .section-title::after { content: ''; flex: 1; height: 2px; background: linear-gradient(to right, #cdddf0, transparent); }
-    .gradient-text { background: linear-gradient(135deg, #1a2f5e, #3b5de7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .link-icon { @apply text-primary-600 hover:text-primary-700 transition-colors; }
-    .btn-download { 
-      background: linear-gradient(135deg, #3b5de7, #2a4bb5);
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 14px rgba(59, 93, 231, 0.3);
-    }
-    .btn-download:hover { 
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 8px 24px rgba(59, 93, 231, 0.4);
-    }
-    .custom-scroll::-webkit-scrollbar { width: 4px; }
-    .custom-scroll::-webkit-scrollbar-track { background: #eef2f7; border-radius: 10px; }
-    .custom-scroll::-webkit-scrollbar-thumb { background: #b6c8e0; border-radius: 10px; }
-  </style>
-</head>
-<body class="font-sans antialiased text-slate-800">
-
-<div class="max-w-7xl mx-auto px-5 py-8 md:py-12">
-
-  <!-- HEADER -->
-  <div class="flex flex-wrap items-start justify-between gap-6 mb-6">
-    <div>
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-800 leading-tight">
-        <span class="gradient-text">Mohammad Nadim</span> Sheikh
-      </h1>
-      <div class="flex flex-wrap items-center gap-3 mt-1.5">
-        <span class="text-lg font-medium text-slate-600">Senior Software Engineer · Technical Lead</span>
-        <span class="bg-primary-100 text-primary-700 px-4 py-0.5 rounded-full text-xs font-semibold border border-primary-200/60">11+ years</span>
-      </div>
-    </div>
-    <div class="flex flex-wrap gap-2 items-center">
-      <span class="chip-modern">Go · Gin</span>
-      <span class="chip-modern">Node · Python</span>
-      <span class="chip-modern">React · Next</span>
-      <span class="chip-modern">Angular</span>
-      <!-- DOWNLOAD CV BUTTON - links to PDF -->
-      <a href="Mohammad_Nadim_Sheikh_CV.pdf" download class="btn-download flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-full ml-2">
-        <span class="material-icons text-base">download</span> Download CV
-      </a>
-    </div>
-  </div>
-
-  <!-- CONTACT + LINKS -->
-  <div class="flex flex-wrap items-center gap-4 md:gap-8 p-4 px-6 rounded-2xl glass-card shadow-sm border border-white/70 mb-8">
-    <a href="mailto:nadim.sheikh.07@gmail.com" class="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-primary-600 transition">
-      <span class="material-icons text-primary-500 text-base">email</span> nadim.sheikh.07@gmail.com
-    </a>
-    <a href="tel:+917737033665" class="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-primary-600 transition">
-      <span class="material-icons text-primary-500 text-base">call</span> (+91) 7737033665
-    </a>
-    <a href="https://github.com/nadimsheikh07" target="_blank" class="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-primary-600 transition">
-      <span class="material-icons text-primary-500 text-base">code</span> github/nadimsheikh07
-    </a>
-    <a href="https://www.linkedin.com/in/nadimsheikh07/" target="_blank" class="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-primary-600 transition">
-      <span class="material-icons text-primary-500 text-base">work</span> linkedin/nadimsheikh07
-    </a>
-    <a href="https://www.npmjs.com/~nadimsheikh07" target="_blank" class="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-primary-600 transition">
-      <span class="material-icons text-primary-500 text-base">package</span> npm/~nadimsheikh07
-    </a>
-  </div>
-
-  <!-- SUMMARY -->
-  <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200/60 hover-lift mb-8">
-    <p class="text-slate-700 text-base md:text-lg leading-relaxed max-w-4xl">
-      <span class="font-semibold text-slate-800">Senior Software Engineer / Technical Lead</span> with 11+ years of experience designing, developing, and leading enterprise-scale web and mobile applications. 
-      Proven expertise in building high-performance microservices, REST APIs, and cloud-ready applications using <span class="font-medium text-primary-700">Go, Node.js, Python, PHP, React, Next.js, and React Native</span>.
-    </p>
-    <p class="text-slate-600 text-base mt-3 max-w-4xl">
-      Experienced in leading engineering teams, architecting scalable systems, optimizing application performance, and delivering production-grade solutions across healthcare, e-commerce, fintech, sports, media, and renewable energy. Passionate about modern software architecture, AI-assisted development, and engineering best practices.
-    </p>
-    <div class="flex flex-wrap gap-2 mt-5">
-      <span class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1.5"><span class="material-icons text-sm">bolt</span> GitHub Copilot</span>
-      <span class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1.5"><span class="material-icons text-sm">chat</span> ChatGPT</span>
-      <span class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1.5"><span class="material-icons text-sm">auto_awesome</span> Claude Code</span>
-      <span class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1.5"><span class="material-icons text-sm">gesture</span> Cursor</span>
-      <span class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1.5"><span class="material-icons text-sm">data_object</span> Codex</span>
-      <span class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1.5"><span class="material-icons text-sm">code</span> VS Code · Visual Studio</span>
-    </div>
-  </div>
-
-  <!-- HIGHLIGHTS / CORE COMPETENCIES in 3 cols -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-    <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-      <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-500 flex items-center gap-2 mb-2"><span class="material-icons text-primary-500 text-base">storage</span> Backend</h4>
-      <div class="flex flex-wrap gap-1.5">
-        <span class="chip-modern text-[11px]">Go · Gin</span>
-        <span class="chip-modern text-[11px]">Node.js · Express · NestJS</span>
-        <span class="chip-modern text-[11px]">Python · Django · FastAPI</span>
-        <span class="chip-modern text-[11px]">PHP · Laravel · CodeIgniter</span>
-      </div>
-      <div class="mt-2 text-xs text-slate-500">REST APIs · TDD · caching · queues · auth</div>
-    </div>
-    <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-      <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-500 flex items-center gap-2 mb-2"><span class="material-icons text-primary-500 text-base">database</span> Databases</h4>
-      <div class="flex flex-wrap gap-1.5">
-        <span class="chip-modern text-[11px]">PostgreSQL · MySQL</span>
-        <span class="chip-modern text-[11px]">MongoDB · Redis</span>
-        <span class="chip-modern text-[11px]">Firebase · SQLite</span>
-      </div>
-      <div class="mt-2 text-xs text-slate-500">schema design · optimization · caching · FCM</div>
-    </div>
-    <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-      <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-500 flex items-center gap-2 mb-2"><span class="material-icons text-primary-500 text-base">web</span> Frontend</h4>
-      <div class="flex flex-wrap gap-1.5">
-        <span class="chip-modern text-[11px]">React · Next.js</span>
-        <span class="chip-modern text-[11px]">Angular</span>
-        <span class="chip-modern text-[11px]">React Native · TypeScript</span>
-        <span class="chip-modern text-[11px]">Material UI · Tailwind</span>
-      </div>
-      <div class="mt-2 text-xs text-slate-500">SSR/SSG · micro-frontends · Jest · Cypress</div>
-    </div>
-  </div>
-
-  <!-- EXPERIENCE + PROJECTS 2-col -->
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6">
-    <!-- LEFT: Experience -->
-    <div>
-      <div class="section-title mb-5"><span class="material-icons text-primary-500 text-2xl">work</span> Experience</div>
-      <div class="space-y-4">
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">Technical Lead</span><span class="text-primary-600 font-medium">CIGI Technologies</span><span class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600">Jul 2024 – Dec 2025</span></div>
-          <p class="text-slate-600 text-sm mt-2">Led technical delivery for scalable web/mobile systems using microservices, frontend/backend, cloud, and AI-assisted engineering.</p>
+      body {
+        background: #f6faff;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .hover-lift {
+        transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+      }
+      .hover-lift:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 40px -14px rgba(0, 20, 60, 0.15);
+      }
+      .chip-modern {
+        @apply px-4 py-1.5 text-xs font-medium rounded-full bg-white/80 border border-slate-200/80 text-slate-700 shadow-sm;
+      }
+      .chip-blue {
+        @apply px-4 py-1.5 text-xs font-semibold rounded-full bg-primary-100 text-primary-700 border border-primary-200/60;
+      }
+      .section-title {
+        @apply text-2xl font-bold tracking-tight text-slate-800 flex items-center gap-3;
+      }
+      .section-title::after {
+        content: "";
+        flex: 1;
+        height: 2px;
+        background: linear-gradient(to right, #cdddf0, transparent);
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #1a2f5e, #3b5de7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .link-icon {
+        @apply text-primary-600 hover:text-primary-700 transition-colors;
+      }
+      .btn-download {
+        background: linear-gradient(135deg, #3b5de7, #2a4bb5);
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 14px rgba(59, 93, 231, 0.3);
+      }
+      .btn-download:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 8px 24px rgba(59, 93, 231, 0.4);
+      }
+      .custom-scroll::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scroll::-webkit-scrollbar-track {
+        background: #eef2f7;
+        border-radius: 10px;
+      }
+      .custom-scroll::-webkit-scrollbar-thumb {
+        background: #b6c8e0;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased text-slate-800">
+    <div class="max-w-7xl mx-auto px-5 py-8 md:py-12">
+      <!-- HEADER -->
+      <div class="flex flex-wrap items-start justify-between gap-6 mb-6">
+        <div>
+          <h1
+            class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-800 leading-tight"
+          >
+            <span class="gradient-text">Mohammad Nadim</span> Sheikh
+          </h1>
+          <div class="flex flex-wrap items-center gap-3 mt-1.5">
+            <span class="text-lg font-medium text-slate-600"
+              >Senior Software Engineer · Technical Lead</span
+            >
+            <span
+              class="bg-primary-100 text-primary-700 px-4 py-0.5 rounded-full text-xs font-semibold border border-primary-200/60"
+              >11+ years</span
+            >
+          </div>
         </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">Senior Software Engineer</span><span class="text-primary-600 font-medium">Quarks Technosoft</span><span class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600">Dec 2021 – Nov 2023</span></div>
-          <p class="text-slate-600 text-sm mt-2">Full-stack & backend systems with scalable APIs, performance, database optimization, modern frontend architecture.</p>
-        </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">Senior Software Engineer</span><span class="text-primary-600 font-medium">Code Town</span><span class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600">Jun 2020 – Nov 2021</span></div>
-          <p class="text-slate-600 text-sm mt-2">Production web apps and REST APIs across PHP, Node.js, Python, React, Angular, and databases.</p>
-        </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">Senior Software Engineer</span><span class="text-primary-600 font-medium">GKIMIT</span><span class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600">Feb 2019 – May 2020</span></div>
-          <p class="text-slate-600 text-sm mt-2">Production web apps and REST APIs across PHP, Node.js, Python, React, Angular.</p>
-        </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">Senior Software Engineer</span><span class="text-primary-600 font-medium">MuskOwl LLP</span><span class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600">Jul 2017 – Jan 2019</span></div>
-          <p class="text-slate-600 text-sm mt-2">Production web apps and REST APIs across PHP, Node.js, Python, React, Angular.</p>
-        </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">Senior Software Engineer</span><span class="text-primary-600 font-medium">Pegasus Turnkey</span><span class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600">Jul 2015 – Jun 2017</span></div>
-          <p class="text-slate-600 text-sm mt-2">PHP, Angular, Laravel, CodeIgniter, OpenCart, WordPress, MySQL.</p>
-        </div>
-        <div class="flex items-center gap-3 text-sm bg-primary-50/80 rounded-full px-5 py-2.5 border border-primary-200/50">
-          <span class="material-icons text-primary-500">school</span>
-          <span><span class="font-semibold">MCA</span> · JRNRV University (2014) – 69% &nbsp;|&nbsp; <span class="font-semibold">BCA</span> (2011) – 63%</span>
+        <div class="flex flex-wrap gap-2 items-center">
+          <span class="chip-modern">Go · Gin</span>
+          <span class="chip-modern">Node · Python</span>
+          <span class="chip-modern">React · Next</span>
+          <span class="chip-modern">Angular</span>
+          <!-- DOWNLOAD CV BUTTON - links to PDF -->
+          <a
+            href="Mohammad_Nadim_Sheikh_CV.pdf"
+            download
+            class="btn-download flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-full ml-2"
+          >
+            <span class="material-icons text-base">download</span> Download CV
+          </a>
         </div>
       </div>
-    </div>
 
-    <!-- RIGHT: Selected Projects -->
-    <div>
-      <div class="section-title mb-5"><span class="material-icons text-primary-500 text-2xl">rocket_launch</span> Selected projects</div>
-      <div class="space-y-4 max-h-[820px] overflow-y-auto pr-1 custom-scroll">
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">CAIT Women Wing Udaipur</span><span class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full">Angular · Go/Gin · PostgreSQL</span></div>
-          <p class="text-sm text-slate-600 mt-1.5">Marketplace platform for local businesses. Microservices with Go/Gin, Angular, Tailwind, PrimeNG, PostgreSQL, MongoDB, Redis.</p>
-          <span class="text-xs text-primary-600 font-medium">Jun 2026 – Aug 2026</span>
-          <div class="mt-1.5 flex flex-wrap gap-1"><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">GitHub Copilot</span><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">ChatGPT</span><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">Claude Code</span></div>
-        </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">Khabir Hisab</span><span class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full">Python · SQLAlchemy · PyQt6</span></div>
-          <p class="text-sm text-slate-600 mt-1.5">Desktop accounting & inventory management (customer, inventory, purchase/sale orders, stock tracking). SQLite.</p>
-          <span class="text-xs text-primary-600 font-medium">Jan 2026 – Jun 2026</span>
-          <div class="mt-1.5 flex flex-wrap gap-1"><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">GitHub Copilot</span><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">ChatGPT</span><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">Claude Code</span></div>
-        </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">ATP Forms</span><span class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full">Next.js · Node.js · PostgreSQL</span></div>
-          <p class="text-sm text-slate-600 mt-1.5">Tournament management forms with real-time player, match, schedule, and result data. Micro-frontends & microservices.</p>
-          <span class="text-xs text-primary-600 font-medium">Jul 2024 – Dec 2025</span>
-          <div class="mt-1.5 flex flex-wrap gap-1"><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">GitHub Copilot</span><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">ChatGPT</span><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">Claude Code</span></div>
-        </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">ATP RuleBook App</span><span class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full">React Native · Expo</span></div>
-          <p class="text-sm text-slate-600 mt-1.5">Mobile application providing access to ATP rules and regulations.</p>
-          <span class="text-xs text-primary-600 font-medium">Jul 2024 – Dec 2024</span>
-          <div class="mt-1.5 flex flex-wrap gap-1"><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">GitHub Copilot</span><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">ChatGPT</span></div>
-        </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">Lea Medicare</span><span class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full">Next.js · Node.js · PostgreSQL</span></div>
-          <p class="text-sm text-slate-600 mt-1.5">Smart EMR platform for Africa: appointments, consultations, records. Micro-frontends/backends.</p>
-          <span class="text-xs text-primary-600 font-medium">Jan 2025 – Dec 2025</span>
-          <div class="mt-1.5 flex flex-wrap gap-1"><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">GitHub Copilot</span><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">ChatGPT</span></div>
-        </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">PowerFlex</span><span class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full">Next.js · Django · PostgreSQL</span></div>
-          <p class="text-sm text-slate-600 mt-1.5">Solar inverter & battery recommendation platform with cost breakdowns.</p>
-          <span class="text-xs text-primary-600 font-medium">Oct 2024 – Jul 2025</span>
-          <div class="mt-1.5 flex flex-wrap gap-1"><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">GitHub Copilot</span><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">ChatGPT</span></div>
-        </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">Sedar Global</span><span class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full">Next.js · PHP/CI · Node</span></div>
-          <p class="text-sm text-slate-600 mt-1.5">E-commerce solutions built from scratch with focus on code quality.</p>
-          <span class="text-xs text-primary-600 font-medium">Jan 2024 – Jul 2024</span>
-          <div class="mt-1.5 flex flex-wrap gap-1"><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">GitHub Copilot</span><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">ChatGPT</span></div>
-        </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">Firstpost</span><span class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full">Next.js · Node/Express · WP</span></div>
-          <p class="text-sm text-slate-600 mt-1.5">Dynamic news platform with real-time updates, scalable delivery.</p>
-          <span class="text-xs text-primary-600 font-medium">Apr 2023 – Dec 2023</span>
-        </div>
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift">
-          <div class="flex flex-wrap items-start justify-between"><span class="font-bold text-slate-800">Asset Track · Thuraya · Cuemath</span><span class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full">Laravel · Next.js · React</span></div>
-          <p class="text-sm text-slate-600 mt-1.5">Asset tracking, satellite recharge, education platform. REST APIs, Material UI.</p>
+      <!-- CONTACT + LINKS -->
+      <div
+        class="flex flex-wrap items-center gap-4 md:gap-8 p-4 px-6 rounded-2xl glass-card shadow-sm border border-white/70 mb-8"
+      >
+        <a
+          href="mailto:nadim.sheikh.07@gmail.com"
+          class="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-primary-600 transition"
+        >
+          <span class="material-icons text-primary-500 text-base">email</span>
+          nadim.sheikh.07@gmail.com
+        </a>
+        <a
+          href="tel:+917737033665"
+          class="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-primary-600 transition"
+        >
+          <span class="material-icons text-primary-500 text-base">call</span>
+          (+91) 7737033665
+        </a>
+        <a
+          href="https://github.com/nadimsheikh07"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-primary-600 transition"
+        >
+          <span class="material-icons text-primary-500 text-base">code</span>
+          github/nadimsheikh07
+        </a>
+        <a
+          href="https://www.linkedin.com/in/nadimsheikh07/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-primary-600 transition"
+        >
+          <span class="material-icons text-primary-500 text-base">work</span>
+          linkedin/nadimsheikh07
+        </a>
+        <a
+          href="https://www.npmjs.com/~nadimsheikh07"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-primary-600 transition"
+        >
+          <span class="material-icons text-primary-500 text-base">package</span>
+          npm/~nadimsheikh07
+        </a>
+      </div>
+
+      <!-- SUMMARY -->
+      <div
+        class="bg-white/80 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-sm border border-slate-200/60 hover-lift mb-8"
+      >
+        <p
+          class="text-slate-700 text-base md:text-lg leading-relaxed max-w-4xl"
+        >
+          <span class="font-semibold text-slate-800"
+            >Senior Software Engineer / Technical Lead</span
+          >
+          with 11+ years of experience designing, developing, and leading
+          enterprise-scale web and mobile applications. Proven expertise in
+          building high-performance microservices, REST APIs, and cloud-ready
+          applications using
+          <span class="font-medium text-primary-700"
+            >Go, Node.js, Python, PHP, React, Next.js, and React Native</span
+          >.
+        </p>
+        <p class="text-slate-600 text-base mt-3 max-w-4xl">
+          Experienced in leading engineering teams, architecting scalable
+          systems, optimizing application performance, and delivering
+          production-grade solutions across healthcare, e-commerce, fintech,
+          sports, media, and renewable energy. Experienced with AI-assisted
+          development, AI/LLM integration workflows, third-party connectors, and
+          engineering best practices.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-5">
+          <span
+            class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1.5"
+            ><span class="material-icons text-sm">bolt</span> GitHub
+            Copilot</span
+          >
+          <span
+            class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1.5"
+            ><span class="material-icons text-sm">chat</span> ChatGPT</span
+          >
+          <span
+            class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1.5"
+            ><span class="material-icons text-sm">auto_awesome</span> Claude
+            Code</span
+          >
+          <span
+            class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1.5"
+            ><span class="material-icons text-sm">gesture</span> Cursor</span
+          >
+          <span
+            class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1.5"
+            ><span class="material-icons text-sm">data_object</span> Codex</span
+          >
+          <span
+            class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1.5"
+            ><span class="material-icons text-sm">code</span> VS Code · Visual
+            Studio</span
+          >
         </div>
       </div>
+
+      <!-- HIGHLIGHTS / CORE COMPETENCIES in 3 cols -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div
+          class="bg-white/70 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+        >
+          <h4
+            class="text-sm font-semibold uppercase tracking-wider text-slate-500 flex items-center gap-2 mb-2"
+          >
+            <span class="material-icons text-primary-500 text-base"
+              >storage</span
+            >
+            Backend
+          </h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="chip-modern text-[11px]">Go · Gin</span>
+            <span class="chip-modern text-[11px]"
+              >Node.js · Express · NestJS</span
+            >
+            <span class="chip-modern text-[11px]"
+              >Python · Django · FastAPI</span
+            >
+            <span class="chip-modern text-[11px]"
+              >PHP · Laravel · CodeIgniter</span
+            >
+          </div>
+          <div class="mt-2 text-xs text-slate-500">
+            REST APIs · TDD · caching · queues · auth
+          </div>
+        </div>
+        <div
+          class="bg-white/70 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+        >
+          <h4
+            class="text-sm font-semibold uppercase tracking-wider text-slate-500 flex items-center gap-2 mb-2"
+          >
+            <span class="material-icons text-primary-500 text-base"
+              >database</span
+            >
+            Databases
+          </h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="chip-modern text-[11px]">PostgreSQL · MySQL</span>
+            <span class="chip-modern text-[11px]">MongoDB · Redis</span>
+            <span class="chip-modern text-[11px]">Firebase · SQLite</span>
+          </div>
+          <div class="mt-2 text-xs text-slate-500">
+            schema design · optimization · caching · FCM
+          </div>
+        </div>
+        <div
+          class="bg-white/70 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+        >
+          <h4
+            class="text-sm font-semibold uppercase tracking-wider text-slate-500 flex items-center gap-2 mb-2"
+          >
+            <span class="material-icons text-primary-500 text-base">web</span>
+            Frontend
+          </h4>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="chip-modern text-[11px]">React · Next.js</span>
+            <span class="chip-modern text-[11px]">Angular</span>
+            <span class="chip-modern text-[11px]"
+              >React Native · TypeScript</span
+            >
+            <span class="chip-modern text-[11px]">Material UI · Tailwind</span>
+          </div>
+          <div class="mt-2 text-xs text-slate-500">
+            SSR/SSG · micro-frontends · Jest · Cypress
+          </div>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE + PROJECTS 2-col -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6">
+        <!-- LEFT: Experience -->
+        <div>
+          <div class="section-title mb-5">
+            <span class="material-icons text-primary-500 text-2xl">work</span>
+            Experience
+          </div>
+          <div class="space-y-4">
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <span class="font-bold text-slate-800">Technical Lead</span
+                ><span class="text-primary-600 font-medium"
+                  >PincodeKart (Contract)</span
+                ><span
+                  class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600"
+                  >Jan 2026 – Jun 2026</span
+                >
+              </div>
+              <p class="text-slate-600 text-sm mt-2">
+                Led technical delivery for a high-performance e-commerce
+                platform using micro-frontends, microservices, modern APIs,
+                databases, and AI-assisted engineering practices.
+              </p>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <span class="font-bold text-slate-800">Technical Lead</span
+                ><span class="text-primary-600 font-medium"
+                  >CIGI Technologies Pvt Ltd</span
+                ><span
+                  class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600"
+                  >Jul 2024 – Dec 2025</span
+                >
+              </div>
+              <p class="text-slate-600 text-sm mt-2">
+                Led technical delivery for scalable web and mobile systems
+                across frontend, backend, databases, cloud, testing, and
+                AI-assisted development.
+              </p>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <span class="font-bold text-slate-800">Technical Lead</span
+                ><span class="text-primary-600 font-medium"
+                  >Sedar Global (Contract)</span
+                ><span
+                  class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600"
+                  >Dec 2023 – Jun 2024</span
+                >
+              </div>
+              <p class="text-slate-600 text-sm mt-2">
+                Delivered and maintained e-commerce solutions using Next.js,
+                Python, PHP/CodeIgniter, Node.js, and modern database
+                technologies.
+              </p>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <span class="font-bold text-slate-800"
+                  >Senior Software Engineer</span
+                ><span class="text-primary-600 font-medium"
+                  >Quarks Technosoft Pvt Ltd</span
+                ><span
+                  class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600"
+                  >Dec 2021 – Nov 2023</span
+                >
+              </div>
+              <p class="text-slate-600 text-sm mt-2">
+                Delivered full-stack and backend systems with scalable APIs,
+                performance improvements, database optimization, and modern
+                frontend architecture.
+              </p>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <span class="font-bold text-slate-800">Technical Lead</span
+                ><span class="text-primary-600 font-medium"
+                  >Code Town Technologies</span
+                ><span
+                  class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600"
+                  >Jun 2020 – Nov 2021</span
+                >
+              </div>
+              <p class="text-slate-600 text-sm mt-2">
+                Developed and maintained production web applications and REST
+                APIs across PHP, Node.js, Python, React, Angular, and databases.
+              </p>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <span class="font-bold text-slate-800"
+                  >Senior Software Engineer</span
+                ><span class="text-primary-600 font-medium">GKMIT Pvt Ltd</span
+                ><span
+                  class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600"
+                  >Feb 2019 – May 2020</span
+                >
+              </div>
+              <p class="text-slate-600 text-sm mt-2">
+                Built production web applications and REST APIs across PHP,
+                Node.js, Python, React, Angular, and database-driven platforms.
+              </p>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <span class="font-bold text-slate-800">Technical Lead</span
+                ><span class="text-primary-600 font-medium">MuskOwl LLP</span
+                ><span
+                  class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600"
+                  >Jul 2017 – Jan 2019</span
+                >
+              </div>
+              <p class="text-slate-600 text-sm mt-2">
+                Developed and maintained production web applications and REST
+                APIs across PHP, Node.js, Python, React, Angular, and databases.
+              </p>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <span class="font-bold text-slate-800"
+                  >Senior Software Engineer</span
+                ><span class="text-primary-600 font-medium"
+                  >Pegasus Turnkey Solution</span
+                ><span
+                  class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-600"
+                  >Jul 2015 – Jun 2017</span
+                >
+              </div>
+              <p class="text-slate-600 text-sm mt-2">
+                Built web applications and e-commerce platforms using PHP,
+                Angular, Laravel, CodeIgniter, OpenCart, WordPress, and MySQL.
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-3 text-sm bg-primary-50/80 rounded-full px-5 py-2.5 border border-primary-200/50"
+            >
+              <span class="material-icons text-primary-500">school</span>
+              <span
+                ><span class="font-semibold">MCA</span> · JRNRV University
+                (2014) – 69% &nbsp;|&nbsp;
+                <span class="font-semibold">BCA</span> · JRNRV University (2011)
+                – 63%</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Selected Projects -->
+        <div>
+          <div class="section-title mb-5">
+            <span class="material-icons text-primary-500 text-2xl"
+              >rocket_launch</span
+            >
+            Selected projects
+          </div>
+          <div
+            class="space-y-4 max-h-[820px] overflow-y-auto pr-1 custom-scroll"
+          >
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <span class="font-bold text-slate-800">D Plus Shaandaar</span
+                ><span
+                  class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full"
+                  >Next.js · React · Material UI</span
+                >
+              </div>
+              <p class="text-sm text-slate-600 mt-1.5">
+                Business website for a Udaipur-based cleaning products brand,
+                with product categories, product details, and customer inquiry
+                flows.
+              </p>
+              <span class="text-xs text-primary-600 font-medium">Oct 2026</span>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <span class="font-bold text-slate-800"
+                  >Jewel Lake Jewellers</span
+                ><span
+                  class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full"
+                  >Next.js · React · Material UI</span
+                >
+              </div>
+              <p class="text-sm text-slate-600 mt-1.5">
+                Jewellery business website showcasing gold, diamond,
+                Kundan/Polki, and silver collections with product inquiry
+                functionality.
+              </p>
+              <span class="text-xs text-primary-600 font-medium">Oct 2026</span>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between">
+                <span class="font-bold text-slate-800"
+                  >CAIT Women Wing Udaipur</span
+                ><span
+                  class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full"
+                  >Angular · Go/Gin · PostgreSQL</span
+                >
+              </div>
+              <p class="text-sm text-slate-600 mt-1.5">
+                Marketplace platform for local businesses. Microservices with
+                Go/Gin, Angular, Tailwind, PrimeNG, PostgreSQL, MongoDB, Redis.
+              </p>
+              <span class="text-xs text-primary-600 font-medium"
+                >Jun 2026 – Aug 2026</span
+              >
+              <div class="mt-1.5 flex flex-wrap gap-1">
+                <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >GitHub Copilot</span
+                ><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >ChatGPT</span
+                ><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >Claude Code</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between">
+                <span class="font-bold text-slate-800">Khabir Hisab</span
+                ><span
+                  class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full"
+                  >Python · SQLAlchemy · PyQt6</span
+                >
+              </div>
+              <p class="text-sm text-slate-600 mt-1.5">
+                Desktop accounting & inventory management (customer, inventory,
+                purchase/sale orders, stock tracking). SQLite.
+              </p>
+              <span class="text-xs text-primary-600 font-medium"
+                >Jan 2026 – Jun 2026</span
+              >
+              <div class="mt-1.5 flex flex-wrap gap-1">
+                <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >GitHub Copilot</span
+                ><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >ChatGPT</span
+                ><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >Claude Code</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between">
+                <span class="font-bold text-slate-800">ATP Forms</span
+                ><span
+                  class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full"
+                  >Next.js · Node.js · PostgreSQL</span
+                >
+              </div>
+              <p class="text-sm text-slate-600 mt-1.5">
+                Tournament management forms with real-time player, match,
+                schedule, and result data. Micro-frontends & microservices.
+              </p>
+              <span class="text-xs text-primary-600 font-medium"
+                >Jul 2024 – Dec 2025</span
+              >
+              <div class="mt-1.5 flex flex-wrap gap-1">
+                <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >GitHub Copilot</span
+                ><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >ChatGPT</span
+                ><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >Claude Code</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between">
+                <span class="font-bold text-slate-800">ATP RuleBook App</span
+                ><span
+                  class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full"
+                  >React Native · Expo</span
+                >
+              </div>
+              <p class="text-sm text-slate-600 mt-1.5">
+                Mobile application providing access to ATP rules and
+                regulations.
+              </p>
+              <span class="text-xs text-primary-600 font-medium"
+                >Jul 2024 – Dec 2024</span
+              >
+              <div class="mt-1.5 flex flex-wrap gap-1">
+                <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >GitHub Copilot</span
+                ><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >ChatGPT</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between">
+                <span class="font-bold text-slate-800">Lea Medicare</span
+                ><span
+                  class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full"
+                  >Next.js · Node.js · PostgreSQL</span
+                >
+              </div>
+              <p class="text-sm text-slate-600 mt-1.5">
+                Smart EMR platform for Africa: appointments, consultations,
+                records. Micro-frontends/backends.
+              </p>
+              <span class="text-xs text-primary-600 font-medium"
+                >Jan 2025 – Dec 2025</span
+              >
+              <div class="mt-1.5 flex flex-wrap gap-1">
+                <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >GitHub Copilot</span
+                ><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >ChatGPT</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between">
+                <span class="font-bold text-slate-800">PowerFlex</span
+                ><span
+                  class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full"
+                  >Next.js · Django · PostgreSQL</span
+                >
+              </div>
+              <p class="text-sm text-slate-600 mt-1.5">
+                Solar inverter & battery recommendation platform with cost
+                breakdowns.
+              </p>
+              <span class="text-xs text-primary-600 font-medium"
+                >Oct 2024 – Jul 2025</span
+              >
+              <div class="mt-1.5 flex flex-wrap gap-1">
+                <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >GitHub Copilot</span
+                ><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >ChatGPT</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between">
+                <span class="font-bold text-slate-800">Sedar Global</span
+                ><span
+                  class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full"
+                  >Next.js · PHP/CI · Node</span
+                >
+              </div>
+              <p class="text-sm text-slate-600 mt-1.5">
+                E-commerce solutions built from scratch with focus on code
+                quality.
+              </p>
+              <span class="text-xs text-primary-600 font-medium"
+                >Jan 2024 – Jul 2024</span
+              >
+              <div class="mt-1.5 flex flex-wrap gap-1">
+                <span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >GitHub Copilot</span
+                ><span class="text-[10px] bg-slate-100 px-2 py-0.5 rounded-full"
+                  >ChatGPT</span
+                >
+              </div>
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between">
+                <span class="font-bold text-slate-800">Firstpost</span
+                ><span
+                  class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full"
+                  >Next.js · Node/Express · WP</span
+                >
+              </div>
+              <p class="text-sm text-slate-600 mt-1.5">
+                Dynamic news platform with real-time updates, scalable delivery.
+              </p>
+              <span class="text-xs text-primary-600 font-medium"
+                >Apr 2023 – Dec 2023</span
+              >
+            </div>
+            <div
+              class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-slate-200/60 shadow-sm hover-lift"
+            >
+              <div class="flex flex-wrap items-start justify-between">
+                <span class="font-bold text-slate-800"
+                  >Asset Track · Thuraya · Cuemath</span
+                ><span
+                  class="text-xs bg-primary-100 text-primary-700 px-3 py-1 rounded-full"
+                  >Laravel · Next.js · React</span
+                >
+              </div>
+              <p class="text-sm text-slate-600 mt-1.5">
+                Asset tracking, satellite recharge, education platform. REST
+                APIs, Material UI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EARLIER PLATFORMS + LEGACY -->
+      <div
+        class="mt-10 flex flex-wrap items-center justify-between gap-4 p-5 bg-white/60 backdrop-blur-sm rounded-3xl border border-slate-200/60 shadow-sm"
+      >
+        <div class="flex items-center gap-3 flex-wrap">
+          <span class="material-icons text-primary-500">history</span>
+          <span class="font-medium text-slate-700"
+            >WordPress · OpenCart · Legacy</span
+          >
+          <span class="text-sm text-slate-500"
+            >Pacific Dental, Ageraa, Posgulf, Vita Juwel, Pegasus Tech</span
+          >
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1"
+            ><span class="material-icons text-sm">gps_fixed</span> GeoWork
+            GPS</span
+          >
+          <span
+            class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1"
+            ><span class="material-icons text-sm">cloud</span> Phomello
+            EPOS</span
+          >
+          <span
+            class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1"
+            ><span class="material-icons text-sm">inventory</span>
+            iDataCollector</span
+          >
+        </div>
+      </div>
+
+      <!-- ATS KEYWORD CLOUD -->
+      <div
+        class="mt-8 p-5 bg-gradient-to-r from-primary-50/80 to-white/80 rounded-3xl border border-primary-200/40 shadow-sm"
+      >
+        <div
+          class="text-sm font-semibold text-slate-600 flex items-center gap-2"
+        >
+          <span class="material-icons text-primary-500">sell</span> ATS keyword
+          cloud
+        </div>
+        <div class="flex flex-wrap gap-2 mt-2">
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >Senior Software Engineer</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >Technical Lead</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >Microservices</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >REST API</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >Go · Gin</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >Node.js · Express</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >Python · Django</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >React · Next.js</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >Angular · React Native</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >PostgreSQL · MongoDB</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >Redis · Firebase</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >AWS · Azure</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >Docker · Cloud Deployment</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >AI/LLM Integration</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >Third-Party Integrations</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >TDD · Jest · Cypress</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >SSR · SSG</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >Performance Optimization</span
+          >
+          <span
+            class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm"
+            >Cloud Applications</span
+          >
+        </div>
+      </div>
+
+      <!-- FOOTER with DOWNLOAD CV button -->
+      <div
+        class="mt-12 pt-6 border-t border-slate-200/80 flex flex-wrap justify-between items-center text-sm text-slate-500"
+      >
+        <span>© 2026 · Mohammad Nadim Sheikh</span>
+        <span class="flex gap-4 flex-wrap items-center">
+          <a
+            href="https://github.com/nadimsheikh07"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-1 hover:text-primary-600 transition"
+            ><span class="material-icons text-sm">code</span> nadimsheikh07</a
+          >
+          <a
+            href="https://www.linkedin.com/in/nadimsheikh07/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-1 hover:text-primary-600 transition"
+            ><span class="material-icons text-sm">work</span> nadimsheikh07</a
+          >
+          <a
+            href="https://www.npmjs.com/~nadimsheikh07"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-1 hover:text-primary-600 transition"
+            ><span class="material-icons text-sm">package</span>
+            ~nadimsheikh07</a
+          >
+          <a
+            href="Mohammad_Nadim_Sheikh_CV.pdf"
+            download
+            class="btn-download flex items-center gap-2 text-white text-xs font-semibold px-5 py-2 rounded-full ml-2"
+          >
+            <span class="material-icons text-sm">download</span> Download CV
+          </a>
+        </span>
+      </div>
     </div>
-  </div>
-
-  <!-- EARLIER PLATFORMS + LEGACY -->
-  <div class="mt-10 flex flex-wrap items-center justify-between gap-4 p-5 bg-white/60 backdrop-blur-sm rounded-3xl border border-slate-200/60 shadow-sm">
-    <div class="flex items-center gap-3 flex-wrap">
-      <span class="material-icons text-primary-500">history</span>
-      <span class="font-medium text-slate-700">WordPress · OpenCart · Legacy</span>
-      <span class="text-sm text-slate-500">Pacific Dental, Ageraa, Posgulf, Vita Juwel, Pegasus Tech</span>
-    </div>
-    <div class="flex flex-wrap gap-2">
-      <span class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1"><span class="material-icons text-sm">gps_fixed</span> GeoWork GPS</span>
-      <span class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1"><span class="material-icons text-sm">cloud</span> Phomello EPOS</span>
-      <span class="bg-primary-50 text-primary-700 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200/60 flex items-center gap-1"><span class="material-icons text-sm">inventory</span> iDataCollector</span>
-    </div>
-  </div>
-
-  <!-- ATS KEYWORD CLOUD -->
-  <div class="mt-8 p-5 bg-gradient-to-r from-primary-50/80 to-white/80 rounded-3xl border border-primary-200/40 shadow-sm">
-    <div class="text-sm font-semibold text-slate-600 flex items-center gap-2"><span class="material-icons text-primary-500">sell</span> ATS keyword cloud</div>
-    <div class="flex flex-wrap gap-2 mt-2">
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">Senior Software Engineer</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">Technical Lead</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">Microservices</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">REST API</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">Go · Gin</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">Node.js · Express</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">Python · Django</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">React · Next.js</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">Angular · React Native</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">PostgreSQL · MongoDB</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">Redis · Firebase</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">AWS · Azure</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">TDD · Jest · Cypress</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">SSR · SSG</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">Performance Optimization</span>
-      <span class="text-xs bg-white/80 px-4 py-1.5 rounded-full border border-slate-200/70 shadow-sm">Cloud Applications</span>
-    </div>
-  </div>
-
-  <!-- FOOTER with DOWNLOAD CV button -->
-  <div class="mt-12 pt-6 border-t border-slate-200/80 flex flex-wrap justify-between items-center text-sm text-slate-500">
-    <span>© 2026 · Mohammad Nadim Sheikh</span>
-    <span class="flex gap-4 flex-wrap items-center">
-      <a href="https://github.com/nadimsheikh07" target="_blank" class="flex items-center gap-1 hover:text-primary-600 transition"><span class="material-icons text-sm">code</span> nadimsheikh07</a>
-      <a href="https://www.linkedin.com/in/nadimsheikh07/" target="_blank" class="flex items-center gap-1 hover:text-primary-600 transition"><span class="material-icons text-sm">work</span> nadimsheikh07</a>
-      <a href="https://www.npmjs.com/~nadimsheikh07" target="_blank" class="flex items-center gap-1 hover:text-primary-600 transition"><span class="material-icons text-sm">package</span> ~nadimsheikh07</a>
-      <a href="Mohammad_Nadim_Sheikh_CV.pdf" download class="btn-download flex items-center gap-2 text-white text-xs font-semibold px-5 py-2 rounded-full ml-2">
-        <span class="material-icons text-sm">download</span> Download CV
-      </a>
-    </span>
-  </div>
-
-</div>
-
-</body>
+  </body>
 </html>
